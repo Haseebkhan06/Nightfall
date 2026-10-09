@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PROJECT: NIGHTFALL</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔦</text></svg>">
+</head>
+<body>
+<div id="app"></div>
+
+<div id="hud" class="hide">
+  <div id="vig"></div><div id="cross"></div><div id="prompt" class="hide"></div>
+  <div id="obj"></div>
+  <div id="bars">BATTERY<div class="bar"><i id="bBat"></i></div>STAMINA<div class="bar"><i id="bSt"></i></div></div>
+  <div id="toast" style="opacity:0"></div>
+  <div id="warn" class="hide">⚠ IT HAS NOTICED YOU</div>
+  <div id="inv" class="hide"></div>
+</div>
+
+<div id="menu" class="ov">
+  <h1>PROJECT: NIGHTFALL</h1>
+  <small>MISSION 01 — THE BREACH</small><br>
+  <button id="cont" class="hide">CONTINUE</button>
+  <button id="start">START NEW GAME</button>
+  <button id="setb">SETTINGS</button>
+  <button id="credb">CREDITS</button>
+  <button id="lbb">LEADERBOARD</button>
+  <div id="info" class="hide"></div>
+  <small>WASD move · Shift sprint · Ctrl/C crouch · F flashlight · E interact · Tab inventory · Esc pause<br>
+  Running is loud. Crouching is quiet. Lockers hide you.</small>
+  <small id="net"></small><small id="err"></small>
+</div>
+
+<div id="pause" class="ov hide">
+  <h2>PAUSED</h2>
+  <button id="resume">RESUME</button>
+  <button id="savebtn">SAVE NOW</button>
+  <label>VOLUME <input class="vol" type="range" min="0" max="1" step=".05"></label>
+  <button class="mute">MUTE: OFF</button>
+</div>
+
+<div id="end" class="ov hide">
+  <h2 id="eT"></h2>
+  <div id="eB" style="max-width:480px"></div>
+  <div id="nameRow" class="hide"><input id="name" maxlength="16" placeholder="CALLSIGN"> <button id="submit">SUBMIT TIME</button></div>
+  <div id="scores"></div>
+  <button id="restart">MAIN MENU</button>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

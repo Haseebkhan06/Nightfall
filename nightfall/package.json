@@ -1,0 +1,18 @@
+{
+  "name": "project-nightfall",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "PROJECT: NIGHTFALL — browser 3D survival horror (Three.js + Vite) with a Node save/leaderboard backend",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm:server\" \"npm:web\"",
+    "web": "vite",
+    "server": "node server/index.js",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "test:server": "node server/test.js"
+  },
+  "dependencies": { "three": "0.128.0" },
+  "devDependencies": { "concurrently": "^9.0.1", "vite": "^5.4.10" }
+}
